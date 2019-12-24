@@ -1,11 +1,8 @@
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
 #include <iostream>
 #include "ClapTrap.hpp"
 #pragma once
 
-
-class FragTrap : public virtual ClapTrap
+class FragTrap : public ClapTrap
 {
     public:
         FragTrap(std::string name);
@@ -17,5 +14,3 @@ class FragTrap : public virtual ClapTrap
         void    beRepaired(unsigned int amount);
         void    vaulthunter_dot_exe(std::string const & target);
 };
-
-#endif

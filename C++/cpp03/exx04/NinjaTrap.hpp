@@ -1,11 +1,8 @@
-#ifndef NINJATRAP_HPP
-#define NINJATRAP_HPP
 #include <iostream>
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #pragma once
-
-class NinjaTrap : public virtual ClapTrap
+class NinjaTrap : public ClapTrap
 {
     public:
         NinjaTrap(std::string name);
@@ -17,6 +14,4 @@ class NinjaTrap : public virtual ClapTrap
         void    beRepaired(unsigned int amount);
         void    ninjaShoebox(FragTrap const &target);
         void    ninjaShoebox(ScavTrap const &target);
-        void    ninjaShoebox(NinjaTrap const &target);
 };
-#endif

@@ -2,7 +2,7 @@
 #define CLAPTRAP_HPP
 
 #include <iostream>
-
+#pragma once
 class ClapTrap
 {
     protected:
@@ -17,6 +17,9 @@ class ClapTrap
         static int armor_damage_reduction;
     public:
         ClapTrap(const std::string name);
+        // ClapTrap(const std::string name, int hit_points,int max_hit_points,
+        // int energy_points,int max_energy_points,int level, int melee_attack_damage,
+        // int ranged_attack_damage, int armor_damage_reduction);
         ClapTrap();
         ~ClapTrap();
         void    rangedAttack(std::string const & target);

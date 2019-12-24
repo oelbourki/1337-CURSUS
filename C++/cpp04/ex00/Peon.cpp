@@ -21,3 +21,7 @@ void Peon::getPolymorphed() const
 {
    std::cout << this->name + " has been turned into a pink pony !" << std::endl; 
 }
+std::string     Peon::get_name()
+{
+    return (this->name);
+}

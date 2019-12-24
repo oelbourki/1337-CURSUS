@@ -8,12 +8,11 @@ class Sorcerer {
     Sorcerer(Sorcerer const & wiz);
     Sorcerer & operator=(const Sorcerer & wiz);
     void polymorph(Victim const &) const;
-    void polymorph(Peon const &) const;
-    std::string operator<<(const Sorcerer &c);
+    std::string     get_name();
+    std::string     get_title();
     ~Sorcerer();
-
     private:
     std::string name;
     std::string title;
 };
-
+std::ostream& operator<< (std::ostream& out, Sorcerer& _Sorcerer);

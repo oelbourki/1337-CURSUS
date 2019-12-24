@@ -7,11 +7,11 @@ class Victim {
         Victim(std::string name);
 		Victim();
 		~Victim();
-        void getPolymorphed() const;
-
+        virtual void getPolymorphed() const;
+		std::string get_name();
 	protected:
 	private:
         std::string name;
 };
-
+std::ostream& operator<< (std::ostream& out, Victim& _Victim);
 #endif

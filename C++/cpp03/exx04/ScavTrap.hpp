@@ -1,21 +1,15 @@
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
 #include <iostream>
 #include "ClapTrap.hpp"
-#pragma once
 
-
-class FragTrap : public virtual ClapTrap
+class ScavTrap : public ClapTrap
 {
     public:
-        FragTrap(std::string name);
-        FragTrap();
-        ~FragTrap();
+        ScavTrap(std::string name);
+        ScavTrap();
+        ~ScavTrap();
         void    rangedAttack(std::string const & target);
         void    meleeAttack(std::string const & target);
         void    takeDamage(unsigned int amount);
         void    beRepaired(unsigned int amount);
-        void    vaulthunter_dot_exe(std::string const & target);
+        void    challengeNewcomer(std::string const & target);
 };
-
-#endif

@@ -28,20 +28,20 @@ void Sorcerer::polymorph(Victim const & victim) const
     victim.getPolymorphed();
 }
 
-void Sorcerer::polymorph(Peon const & peon) const
+std::string     Sorcerer::get_name()
 {
-    peon.getPolymorphed();
+    return (this->name);
 }
-// ostream & Sorcerer::operator<<(ostream &out, const Sorcerer &c);
-// {
-//     std::cout << "I am " + this->name + ", TITLE, and I like ponies !" << std::endl;
-// }
 
-
-std::string Sorcerer::operator<<(const Sorcerer &c)
+std::string     Sorcerer::get_title()
 {
-    std::string x =  "I am " + this->name + ", TITLE, and I like ponies !\n";
-    return x;
+    return (this->title);
+}
+
+std::ostream& operator<< (std::ostream& out, Sorcerer& _Sorcerer)
+{
+    out <<  "I am " + _Sorcerer.get_name() + ", " +  _Sorcerer.get_title() + ", and I like ponies !\n";
+    return (out);
 }
 
 
